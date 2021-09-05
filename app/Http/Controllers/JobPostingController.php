@@ -73,9 +73,10 @@ class JobPostingController extends Controller
      * @param  \App\Models\JobPosting  $jobPosting
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, JobPosting $jobPosting)
+    public function update(JobPostingRequest $jobPostingRequest, JobPosting  $jobPosting)
     {
-        //
+        // $posting = $jobPosting->save($jobPostingRequest->all());
+        // return response()->json(['message' => "Job Posting has been successfully saved",'data' => $posting]);
     }
 
     /**
@@ -86,7 +87,7 @@ class JobPostingController extends Controller
      */
     public function destroy(JobPosting $jobPosting)
     {
-        $jobsPosting->delete();
+        $jobPosting->delete();
         return response()->json(['message' => "Job Posting has been successfully deleted"]);
     }
 }

@@ -1873,9 +1873,179 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/JobPostingComponent.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\resources\\js\\components\\JobPostingComponent.vue: Unexpected token, expected \",\" (102:7)\n\n\u001b[0m \u001b[90m 100 |\u001b[39m     }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 101 |\u001b[39m     deleteindex\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 102 |\u001b[39m        axios\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 103 |\u001b[39m         \u001b[33m.\u001b[39m\u001b[36mdelete\u001b[39m(\u001b[32m`/job_postings/${item.id}`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 104 |\u001b[39m         \u001b[33m.\u001b[39mthen(\u001b[36mfunction\u001b[39m (response) {\u001b[0m\n\u001b[0m \u001b[90m 105 |\u001b[39m           vm\u001b[33m.\u001b[39mpostingList\u001b[33m.\u001b[39mpush(response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata)\u001b[33m;\u001b[39m\u001b[0m\n    at Parser._raise (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:798:17)\n    at Parser.raiseWithData (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:791:17)\n    at Parser.raise (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:752:17)\n    at Parser.unexpected (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:3257:16)\n    at Parser.expect (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:3231:28)\n    at Parser.parseObjectLike (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:11945:14)\n    at Parser.parseExprAtom (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:11432:23)\n    at Parser.parseExprSubscripts (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:11081:23)\n    at Parser.parseUpdate (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:11061:21)\n    at Parser.parseMaybeUnary (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:11039:23)\n    at Parser.parseExprOps (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:10882:23)\n    at Parser.parseMaybeConditional (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:10856:23)\n    at Parser.parseMaybeAssign (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:10814:21)\n    at C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:10776:39\n    at Parser.allowInAnd (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:12595:12)\n    at Parser.parseMaybeAssignAllowIn (C:\\Users\\2ndyrGroupA\\Desktop\\vuelaravel\\node_modules\\@babel\\parser\\lib\\index.js:10776:17)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["posting"],
+  data: function data() {
+    return {
+      postingList: this.posting,
+      form: {
+        job_name: null,
+        job_description: null,
+        vacants: 0
+      },
+      formEdit: {
+        job_name: null,
+        job_description: null,
+        vacants: 0
+      }
+    };
+  },
+  methods: {
+    submit: function submit() {
+      var vm = this;
+      axios.post("/job_postings", this.form).then(function (response) {
+        vm.postingList.push(response.data.data);
+        vm.form.job_name = null;
+        vm.form.job_description = null;
+        vm.form.vacants = 0;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    remove: function remove(item, index) {
+      var vm = this;
+      axios["delete"]("/job_postings/".concat(item.id)).then(function (response) {
+        vm.postingList.splice(index, 1);
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    edit: function edit(item) {
+      var vm = this;
+      $("#editModal").modal("show");
+      vm.formEdit.job_name = item.job_name;
+      vm.formEdit.job_description = item.job_description;
+      vm.formEdit.vacants = item.vacants;
+    }
+  }
+});
 
 /***/ }),
 
@@ -37560,15 +37730,41 @@ var render = function() {
       _vm._v(" "),
       _c(
         "tbody",
-        _vm._l(_vm.postingList, function(item) {
+        _vm._l(_vm.postingList, function(item, index) {
           return _c("tr", { key: item.id }, [
-            _c("td", [_vm._v(" " + _vm._s(item.job_name) + " ")]),
+            _c("td", [_vm._v(_vm._s(item.job_name))]),
             _vm._v(" "),
-            _c("td", [_vm._v(" " + _vm._s(item.job_description))]),
+            _c("td", [_vm._v(_vm._s(item.job_description))]),
             _vm._v(" "),
-            _c("td", [_vm._v(" " + _vm._s(item.vacants))]),
+            _c("td", [_vm._v(_vm._s(item.vacants))]),
             _vm._v(" "),
-            _vm._m(1, true)
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-secondary btn-sm",
+                  on: {
+                    click: function($event) {
+                      return _vm.edit(item)
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-edit" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger btn-sm",
+                  on: {
+                    click: function($event) {
+                      return _vm.remove(item, index)
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-trash" })]
+              )
+            ])
           ])
         }),
         0
@@ -37668,7 +37864,146 @@ var render = function() {
           ])
         ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "editModal",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "exampleModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-body" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Job Name")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formEdit.job_name,
+                        expression: "formEdit.job_name"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Input Job Name" },
+                    domProps: { value: _vm.formEdit.job_name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.formEdit, "job_name", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "" } }, [
+                    _vm._v("Job Description")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formEdit.job_description,
+                        expression: "formEdit.job_description"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      placeholder: "Input Job Description"
+                    },
+                    domProps: { value: _vm.formEdit.job_description },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.formEdit,
+                          "job_description",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Vacants")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formEdit.vacants,
+                        expression: "formEdit.vacants"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Input Vacants" },
+                    domProps: { value: _vm.formEdit.vacants },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.formEdit, "vacants", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-footer" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-secondary",
+                    attrs: { type: "button", "data-dismiss": "modal" }
+                  },
+                  [_vm._v("\n            Close\n          ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.save()
+                      }
+                    }
+                  },
+                  [_vm._v("Save changes")]
+                )
+              ])
+            ])
+          ]
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -37690,14 +38025,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("button", { staticClass: "btn btn-secondary btn-sm" }, [
-        _c("i", { staticClass: "fa fa-edit" })
-      ]),
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "exampleModalLabel" } },
+        [_vm._v("Modal title")]
+      ),
       _vm._v(" "),
-      _c("button", { staticClass: "btn btn-danger btn-sm" }, [
-        _c("i", { staticClass: "fa fa-trash" })
-      ])
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
     ])
   }
 ]
