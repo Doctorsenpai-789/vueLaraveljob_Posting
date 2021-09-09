@@ -31,3 +31,29 @@ Vue.component('job-posting-component', require('./components/JobPostingComponent
 const app = new Vue({
     el: '#app',
 });
+
+
+import Toaster from 'v-toaster'
+ 
+// You need a specific loader for CSS files like https://github.com/webpack/css-loader
+import 'v-toaster/dist/v-toaster.css'
+
+import VueToast from 'vue-toast-notification';
+// Import one of the available themes
+//import 'vue-toast-notification/dist/theme-default.css';
+import 'vue-toast-notification/dist/theme-sugar.css';
+
+const app = createApp({});
+app.use(VueToast);
+app.mount('#app');
+
+//Vue.$toast.open({/* options */});
+let instance = app.$toast.open('You did it!');
+
+// Force dismiss specific toast
+instance.dismiss();
+// Dismiss all opened toast immediately
+app.$toast.clear();
+ 
+// optional set default imeout, the default is 10000 (10 seconds).
+Vue.use(Toaster, {timeout: 5000})

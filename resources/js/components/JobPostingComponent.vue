@@ -109,7 +109,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary" @click="save()">Save changes</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" >Save changes</button>
           </div>
         </div>
       </div>
@@ -146,43 +146,47 @@ export default {
           vm.form.job_name = null;
           vm.form.job_description = null;
           vm.form.vacants = 0;
+          vm.$toaster.success('Your toaster success message.')
         })
         .catch(function (error) {
           console.log(error);
         });
     },
     remove(item, index) {
-      const vm = this;
-      axios
-        .delete(`/job_postings/${item.id}`)
-        .then(function (response) {
+       axios
+         .delete(`/job_postings/${item.id}`)
+         .then(function (response) {
           vm.postingList.splice(index, 1);
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+           console.log(response);
+         })
+         .catch(function (error) {
+           alert (error);
+          // console.log(error);
+         });
     },
     edit(item){
-      console.log(item);
+      console.log(item)
       this.formEdit.job_name = item.job_name;
       this.formEdit.job_description = item.job_description;
       this.formEdit.vacants = item.vacants;
       this.selectedId = item.id;
       $("#editModal").modal("show");
     },
-    save(){
-      
-       const vm = this;
-      axios
-        .put(`/job_postings/${vm.selectedId}`, this.formEdit)
-        .then(function (response) {
-          alert('Job Posting has been successfully saved')
-          location.reload();
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+    // save(){
+    //   alert("hello");
+    //   // const vm = this;
+    //   // axios
+    //   //   .put(`/job_postings/${this.selectedId}`, this.formEdit)
+    //   //   .then(function (response) {
+    //   //     alert('Job Posting has been successfully saved');
+    //   //     location.reload();
+    //   //   })
+    //   //   .catch(function (error) {
+    //   //     console.log(error);
+    //   //   });
+    // }
+    changes(){
+      alert("it has been changed");
     }
   },
 };
